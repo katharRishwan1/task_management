@@ -33,7 +33,7 @@ module.exports = {
                 email: checkExist.email
             };            
             return res.success({
-                msg:responseMessages[1021],
+                msg:responseMessages[1016],
                 result:{
                     token,
                     userDetails

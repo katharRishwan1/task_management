@@ -12,12 +12,6 @@ module.exports = {
                     msg: error
                 });
             };
-            const filterQuery = { isDeleted: false, name,toWhom };
-            const checkExist = await db.task.findOne(filterQuery);
-            if(checkExist){
-            return res.clientError({
-               msg:responseMessages[1001] 
-            })};
             req.body.createdBy = req.decoded.user_id;
             const data = await db.task.create(req.body);
             if(data){
